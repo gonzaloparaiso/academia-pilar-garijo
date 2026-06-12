@@ -61,7 +61,7 @@ p { margin: 0; text-wrap: pretty; }
   background: color-mix(in srgb, var(--primary) 6%, var(--surface));
   border: 1px dashed var(--line);
 }
-img.ph { padding: 0; border: none; }
+img.ph { padding: 0; border: none; display: block; }
 
 /* ---------- Buttons (contenido) ---------- */
 .btn {

@@ -60,7 +60,7 @@ html { scroll-behavior: smooth; }
   background: var(--cream-deep);
   border: 1px dashed var(--line);
 }
-img.photo { padding: 0; border: none; }
+img.photo { padding: 0; border: none; display: block; }
 
 body {
   margin: 0;
