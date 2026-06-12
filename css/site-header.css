@@ -1,0 +1,162 @@
+/* ============================================================
+   Pilar Garijo — Header compartido (mismo menú en todas las páginas)
+   Autónomo: clases con prefijo .pg- y variables propias --pgh-*,
+   para que se vea idéntico sobre cualquier hoja de estilos base.
+   Edita SOLO este archivo + assets/site-header.js para cambiar el menú.
+   ============================================================ */
+:root {
+  --pgh-bg:       #F8F3E9;
+  --pgh-surface:  #FFFFFF;
+  --pgh-ink:      #1C1505;
+  --pgh-soft:     #6B5E48;
+  --pgh-line:     #E8DFCE;
+  --pgh-primary:  #231A04;
+  --pgh-accent:   #9A7B3C;
+  --pgh-deep:     #231A04;
+  --pgh-deep-ink: #F4ECDB;
+  --pgh-wa:       #1FA855;
+  --pgh-wa-d:     #128C42;
+  --pgh-serif: "Newsreader", Georgia, serif;
+  --pgh-sans:  "Hanken Grotesk", system-ui, sans-serif;
+}
+
+/* ---------- Botones del header ---------- */
+.pg-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  font-family: var(--pgh-sans); font-weight: 700; font-size: 15px;
+  border: none; border-radius: 999px; padding: 12px 22px; cursor: pointer;
+  white-space: nowrap; text-decoration: none;
+  transition: transform .15s ease, background .2s ease, box-shadow .2s ease, color .2s ease, border-color .2s ease;
+}
+.pg-btn:active { transform: translateY(1px) scale(.99); }
+.pg-btn--wa { background: var(--pgh-wa); color: #fff; box-shadow: 0 12px 26px -12px rgba(31,168,85,.7); }
+.pg-btn--wa:hover { background: var(--pgh-wa-d); transform: translateY(-2px); box-shadow: 0 18px 32px -12px rgba(31,168,85,.75); }
+.pg-btn--ghost { background: transparent; color: var(--pgh-ink); border: 1.5px solid var(--pgh-line); }
+.pg-btn--ghost:hover { border-color: var(--pgh-primary); color: var(--pgh-primary); }
+.pg-btn .pg-wa { width: 20px; height: 20px; flex: none; }
+
+/* ---------- Header ---------- */
+.pg-header {
+  position: sticky; top: 0; z-index: 60;
+  background: color-mix(in srgb, var(--pgh-bg) 86%, transparent);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s ease, background .3s ease;
+  font-family: var(--pgh-sans);
+}
+.pg-header.pg-scrolled { border-color: var(--pgh-line); background: color-mix(in srgb, var(--pgh-bg) 94%, transparent); }
+.pg-nav {
+  width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 28px;
+  display: flex; align-items: center; gap: 28px; height: 78px;
+}
+.pg-logo { margin-right: auto; display: inline-flex; align-items: center; }
+.pg-logo img { height: 50px; width: auto; display: block; }
+
+.pg-links { display: flex; gap: 26px; align-items: center; }
+.pg-links a {
+  font-size: 15px; font-weight: 600; color: var(--pgh-soft);
+  position: relative; padding: 4px 0; text-decoration: none;
+}
+.pg-links a:hover { color: var(--pgh-ink); }
+.pg-links a::after {
+  content: ""; position: absolute; left: 0; right: 100%; bottom: -2px;
+  height: 2px; background: var(--pgh-primary); transition: right .25s ease;
+}
+.pg-links a:hover::after { right: 0; }
+
+.pg-lang {
+  display: inline-flex; border: 1.5px solid var(--pgh-line);
+  border-radius: 999px; overflow: hidden; font-size: 12.5px; font-weight: 700;
+}
+.pg-lang button {
+  background: transparent; border: none; cursor: pointer; padding: 7px 12px;
+  color: var(--pgh-soft); font-family: var(--pgh-sans); font-weight: 700;
+}
+.pg-lang button.on { background: var(--pgh-ink); color: var(--pgh-bg); }
+
+.pg-privada { font-size: 15px; }
+
+.pg-burger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+.pg-burger svg { width: 28px; height: 28px; stroke: var(--pgh-ink); }
+
+/* ---------- Drawer móvil ---------- */
+.pg-drawer { display: none; }
+.pg-drawer-close { position: absolute; top: 22px; right: 22px; background: none; border: none; cursor: pointer; }
+.pg-drawer-close svg { width: 30px; height: 30px; stroke: var(--pgh-ink); }
+
+/* ---------- WhatsApp flotante ---------- */
+.pg-fab {
+  position: fixed; right: 22px; bottom: 22px; z-index: 70;
+  width: 62px; height: 62px; border-radius: 50%;
+  background: var(--pgh-wa); border: none; cursor: pointer;
+  display: grid; place-items: center;
+  box-shadow: 0 14px 30px -8px rgba(31,168,85,.7);
+  transition: transform .18s ease;
+  animation: pg-fabpulse 2.6s ease-in-out infinite;
+}
+.pg-fab:hover { transform: scale(1.08); }
+.pg-fab svg { width: 32px; height: 32px; }
+@keyframes pg-fabpulse {
+  0%, 100% { box-shadow: 0 14px 30px -8px rgba(31,168,85,.7), 0 0 0 0 rgba(31,168,85,.4); }
+  50% { box-shadow: 0 14px 30px -8px rgba(31,168,85,.7), 0 0 0 14px rgba(31,168,85,0); }
+}
+
+/* ---------- Modal de WhatsApp ---------- */
+.pg-modal-backdrop {
+  position: fixed; inset: 0; z-index: 80;
+  background: rgba(43,33,24,.5); backdrop-filter: blur(4px);
+  display: none; align-items: center; justify-content: center; padding: 22px;
+  opacity: 0; transition: opacity .2s ease;
+}
+.pg-modal-backdrop.pg-open { display: flex; opacity: 1; }
+.pg-modal {
+  background: var(--pgh-surface); border-radius: 20px;
+  width: 100%; max-width: 440px; overflow: hidden;
+  box-shadow: 0 2px 4px rgba(46,38,32,.05), 0 40px 80px -30px rgba(46,38,32,.40);
+  transform: translateY(12px) scale(.98); transition: transform .22s ease;
+  font-family: var(--pgh-sans);
+}
+.pg-modal-backdrop.pg-open .pg-modal { transform: none; }
+.pg-modal-head { padding: 26px 26px 18px; display: flex; gap: 14px; align-items: flex-start; }
+.pg-modal-head .pg-wa-ico { width: 46px; height: 46px; border-radius: 13px; background: var(--pgh-wa); display: grid; place-items: center; flex: none; }
+.pg-modal-head .pg-wa-ico svg { width: 26px; height: 26px; }
+.pg-modal-head h3 { font-family: var(--pgh-serif); font-weight: 500; font-size: 23px; margin: 0 0 3px; color: var(--pgh-ink); }
+.pg-modal-head p { font-size: 14px; color: var(--pgh-soft); margin: 0; }
+.pg-modal-head .pg-close { margin-left: auto; background: none; border: none; cursor: pointer; padding: 4px; color: var(--pgh-soft); }
+.pg-modal-head .pg-close svg { width: 22px; height: 22px; }
+.pg-modal-list { padding: 6px 18px 22px; display: flex; flex-direction: column; gap: 8px; }
+.pg-modal-list a {
+  display: flex; align-items: center; gap: 14px; padding: 14px 16px;
+  border-radius: 13px; border: 1px solid var(--pgh-line); text-decoration: none;
+  transition: background .15s ease, border-color .15s ease;
+}
+.pg-modal-list a:hover { background: color-mix(in srgb, var(--pgh-wa) 8%, var(--pgh-surface)); border-color: var(--pgh-wa); }
+.pg-modal-list .pg-ic { width: 40px; height: 40px; border-radius: 10px; background: color-mix(in srgb, var(--pgh-accent) 20%, var(--pgh-surface)); display: grid; place-items: center; flex: none; font-family: var(--pgh-serif); font-size: 16px; color: var(--pgh-ink); }
+.pg-modal-list .pg-meta { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.pg-modal-list .pg-meta .pg-c { font-weight: 700; font-size: 16px; color: var(--pgh-ink); }
+.pg-modal-list .pg-meta .pg-a { font-size: 13px; color: var(--pgh-soft); }
+.pg-modal-list .pg-go { color: var(--pgh-wa); display: inline-flex; }
+.pg-modal-list .pg-go svg { width: 20px; height: 20px; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 720px) {
+  .pg-nav { height: 66px; gap: 14px; padding: 0 20px; }
+  .pg-logo img { height: 40px; }
+  .pg-links { display: none; }
+  .pg-privada { display: none; }
+  .pg-burger { display: block; }
+
+  .pg-drawer {
+    display: block; position: fixed; inset: 0; z-index: 65;
+    background: var(--pgh-bg);
+    transform: translateX(100%); transition: transform .3s ease;
+    padding: 90px 28px 28px;
+  }
+  .pg-drawer.pg-open { transform: none; }
+  .pg-drawer a { display: block; font-family: var(--pgh-serif); font-size: 30px; padding: 14px 0; border-bottom: 1px solid var(--pgh-line); color: var(--pgh-ink); text-decoration: none; }
+  .pg-drawer .pg-btn--wa { margin-top: 26px; width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pg-fab { animation: none; }
+}
