@@ -1,0 +1,556 @@
+/* ============================================================
+   Academia Pilar Garijo — Área privada
+   Misma paleta que la landing: blanco · negro · #231a04
+   ============================================================ */
+
+:root {
+  --ink: #231a04;
+  --black: #0d0a02;
+  --white: #ffffff;
+  --page: #F8F3E9;   /* fondo crema — igual que la home */
+  --cream: #F0E7D4;
+  --cream-deep: color-mix(in oklab, var(--ink) 12%, var(--white));
+  --line: color-mix(in oklab, var(--ink) 16%, var(--white));
+  --ink-soft: color-mix(in oklab, var(--ink) 72%, var(--white));
+  --ink-faint: color-mix(in oklab, var(--ink) 52%, var(--white));
+
+  --font-display: "Newsreader", Georgia, serif;
+  --font-body: "Hanken Grotesk", system-ui, sans-serif;
+  --radius: 2px;
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--ink); color: var(--white); }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0;
+  text-wrap: balance;
+}
+
+p { margin: 0; text-wrap: pretty; }
+
+button { font-family: var(--font-body); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: var(--radius);
+  padding: 15px 28px;
+  border: 1px solid var(--ink);
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.15s ease;
+}
+.btn:active { transform: translateY(1px); }
+.btn--solid { background: var(--ink); color: var(--white); }
+.btn--solid:hover { background: var(--black); border-color: var(--black); }
+.btn--ghost { background: transparent; color: var(--ink); }
+.btn--ghost:hover { background: var(--ink); color: var(--white); }
+
+.kicker {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+/* ============================================================
+   Login
+   ============================================================ */
+.login-screen {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(900px 480px at 50% -10%, var(--cream-deep) 0%, transparent 70%),
+    var(--cream);
+}
+.login-card {
+  width: min(420px, 100%);
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: clamp(36px, 5vw, 52px);
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  box-shadow: 0 30px 80px -50px color-mix(in oklab, var(--ink) 50%, transparent);
+}
+.login-card .wordmark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 1.1;
+  gap: 6px;
+}
+.wordmark img.wordmark-logo { height: 34px; width: auto; display: block; }
+.login-card .wordmark img.wordmark-logo { height: 58px; }
+.login-card .wordmark strong {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+.login-card .wordmark > span {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.login-card h1 {
+  font-size: 24px;
+  text-align: center;
+}
+.login-card .hint {
+  text-align: center;
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin-top: -14px;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.field label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.field input {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--ink);
+  background: var(--white);
+  border: none;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  padding: 9px 2px 11px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+.field input::placeholder { color: color-mix(in oklab, var(--ink) 30%, var(--white)); }
+.field input:focus { border-bottom-color: var(--ink); }
+.login-aux {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--ink-faint);
+}
+.login-aux a { color: inherit; }
+.login-back {
+  text-align: center;
+  font-size: 13px;
+  color: var(--ink-faint);
+}
+.login-back a { color: inherit; }
+
+/* ============================================================
+   Área privada — layout
+   ============================================================ */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: color-mix(in oklab, var(--page) 90%, transparent);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+.app-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height: 68px;
+  padding: 0 clamp(20px, 3vw, 40px);
+}
+.app-header .wordmark {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.app-header .wordmark strong {
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+.app-header .wordmark > span {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  border-left: 1px solid var(--line);
+  padding-left: 12px;
+}
+.app-user {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+}
+.app-user .avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-size: 15px;
+}
+.app-user button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  padding: 6px 0;
+}
+.app-user button:hover { color: var(--ink); }
+
+.app-body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  align-items: stretch;
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ---------- sidebar de lecciones ---------- */
+.sidebar {
+  background: var(--white);
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+}
+.course-head {
+  padding: 28px 28px 24px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.course-head h2 {
+  font-size: 23px;
+}
+.progress {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.progress-bar {
+  height: 3px;
+  background: var(--line);
+  overflow: hidden;
+}
+.progress-bar i {
+  display: block;
+  height: 100%;
+  background: var(--ink);
+  transition: width 0.4s ease;
+}
+.progress > span {
+  font-size: 11.5px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.lesson-nav {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px 0 16px;
+}
+.module-label {
+  padding: 20px 28px 8px;
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.lesson-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  background: none;
+  border: none;
+  border-left: 2px solid transparent;
+  padding: 13px 28px 13px 26px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  font-weight: 300;
+  color: var(--ink-soft);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.lesson-item:hover { background: var(--cream); color: var(--ink); }
+.lesson-item.active {
+  border-left-color: var(--ink);
+  background: var(--cream);
+  color: var(--ink);
+  font-weight: 400;
+}
+.lesson-status {
+  width: 22px;
+  height: 22px;
+  flex: none;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 11.5px;
+  color: var(--ink-faint);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.lesson-item.done .lesson-status {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--white);
+}
+.lesson-item .lesson-name { flex: 1; }
+.lesson-item .lesson-dur {
+  font-size: 11.5px;
+  color: var(--ink-faint);
+  flex: none;
+}
+.lesson-item .has-note {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--ink-faint);
+  flex: none;
+}
+
+.sidebar-footer {
+  border-top: 1px solid var(--line);
+  padding: 20px 28px;
+}
+.sidebar-footer .btn { width: 100%; }
+
+/* ---------- visor ---------- */
+.viewer {
+  padding: clamp(24px, 3.4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  min-width: 0;
+}
+
+.video-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--ink);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.video-frame .play {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in oklab, var(--white) 50%, transparent);
+  background: color-mix(in oklab, var(--white) 8%, transparent);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+.video-frame .play:hover {
+  background: color-mix(in oklab, var(--white) 18%, transparent);
+  transform: scale(1.05);
+}
+.video-frame .play svg { margin-left: 5px; }
+.video-frame .video-caption {
+  position: absolute;
+  left: 24px;
+  bottom: 18px;
+  font-size: 11.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--white) 55%, var(--ink));
+}
+.video-frame .video-dur {
+  position: absolute;
+  right: 24px;
+  bottom: 18px;
+  font-size: 11.5px;
+  letter-spacing: 0.14em;
+  color: color-mix(in oklab, var(--white) 55%, var(--ink));
+}
+
+.lesson-head {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.lesson-head .kicker { display: block; }
+.lesson-head h1 {
+  font-size: clamp(28px, 3vw, 40px);
+}
+.lesson-meta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.mark-done {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 9px 18px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.mark-done:hover { border-color: var(--ink); color: var(--ink); }
+.mark-done.is-done {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--white);
+}
+
+.lesson-text {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: clamp(24px, 3vw, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 16.5px;
+  color: var(--ink-soft);
+  max-width: 76ch;
+}
+.lesson-text h3 {
+  font-size: 21px;
+  color: var(--ink);
+}
+
+.notes {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: clamp(24px, 3vw, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.notes-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+.notes-head h3 {
+  font-size: 21px;
+}
+.notes-head > span {
+  font-size: 12px;
+  color: var(--ink-faint);
+  letter-spacing: 0.08em;
+}
+.notes textarea {
+  font-family: var(--font-body);
+  font-size: 15.5px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--cream);
+  border: 1px solid transparent;
+  border-radius: 0;
+  padding: 18px;
+  min-height: 140px;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.notes textarea:focus {
+  background: var(--white);
+  border-color: var(--ink);
+}
+.notes textarea::placeholder { color: color-mix(in oklab, var(--ink) 32%, var(--white)); }
+
+.lesson-pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.lesson-pager .btn { padding: 13px 22px; }
+.lesson-pager .btn[disabled] {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .app-body { grid-template-columns: 1fr; }
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+  }
+  .lesson-nav { max-height: 320px; }
+}
