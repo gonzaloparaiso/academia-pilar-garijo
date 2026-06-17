@@ -97,7 +97,7 @@ function LoginScreen({ onLogin }) {
           <button className="btn btn--solid" type="submit">Entrar</button>
         </form>
         <p className="login-back">
-          <a href="Landing Academia Pilar Garijo.html">← Volver a la academia</a>
+          <a href="index.html">← Volver a la academia</a>
         </p>
       </div>
     </div>
@@ -169,7 +169,7 @@ function AreaPrivada({ onLogout }) {
     <div className="app" data-screen-label="Área privada">
       <header className="app-header">
         <div className="app-header-inner">
-          <a className="wordmark" href="Landing Academia Pilar Garijo.html">
+          <a className="wordmark" href="index.html">
             <img src="assets/logo.png" alt="Pilar Garijo" className="wordmark-logo" />
             <span>Área privada</span>
           </a>

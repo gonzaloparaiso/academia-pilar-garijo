@@ -1,14 +1,10 @@
-# Academia Pilar Garijo — sitio web
+# Academia Pilar Garijo — web
 
-Sitio estático de los Centros de Quiromasaje Pilar Garijo y su Academia.
+Web de la Academia (independiente de las clínicas).
 
-- `index.html` — Home de las clínicas (3 centros, reserva por WhatsApp).
-- `Landing Academia Pilar Garijo.html` — Landing de venta de los cursos.
-
-El **menú superior es compartido** entre todas las páginas:
-edita `css/site-header.css` + `assets/site-header.js` una sola vez.
+- `index.html` — Landing de venta de los cursos (método, Pilar, cursos, registro, FAQ).
+- `area-privada.html` — Login (simulado) + curso con lecciones, vídeo y notas.
+- Enlace a la web de **Centros Pilar Garijo** únicamente en el pie de página.
 
 ## Pendientes
-- Sustituir los huecos `.ph` / `.photo` por imágenes reales (`<img>`).
-- Conectar el formulario de registro de la landing (atributo `data-endpoint`).
-- Área privada (`Academia Pilar Garijo.html`): aún no implementada.
+- Conectar el formulario de registro (atributo `data-endpoint` del `<form id="lead-form">`).
