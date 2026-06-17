@@ -278,7 +278,7 @@ img { display: block; max-width: 100%; }
 /* ============================================================
    Footer — granate
    ============================================================ */
-.a-footer { background: var(--black); color: var(--cream); }
+.a-footer { background: var(--ink); color: var(--cream); }
 .a-footer .shell { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 44px; padding: clamp(64px,8vw,100px) var(--gutter) 48px; }
 .a-footer .f-brand img { height: 60px; }
 .a-footer .f-blurb { margin-top: 20px; color: var(--cream-soft); font-size: 15px; max-width: 34ch; }
