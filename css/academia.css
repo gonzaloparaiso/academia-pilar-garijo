@@ -106,7 +106,7 @@ img { display: block; max-width: 100%; }
 .hero {
   background: var(--ink); color: var(--cream);
   min-height: 100svh; display: flex; flex-direction: column; justify-content: center;
-  padding-top: 120px; padding-bottom: 56px; position: relative; overflow: hidden;
+  padding-top: 104px; padding-bottom: 44px; position: relative; overflow: hidden;
 }
 .hero::after { /* filete inferior */
   content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--line-dark);
@@ -114,12 +114,12 @@ img { display: block; max-width: 100%; }
 .hero .tag { color: var(--cream-soft); }
 .hero-grid { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: clamp(32px,5vw,80px); align-items: end; }
 .hero h1 {
-  font-size: clamp(54px, 10vw, 168px); line-height: .92; letter-spacing: -.02em;
-  margin: 28px 0 0; color: var(--cream);
+  font-size: clamp(38px, 5.6vw, 92px); line-height: .98; letter-spacing: -.02em;
+  margin: 22px 0 0; color: var(--cream);
 }
 .hero h1 em { font-style: italic; font-weight: 400; color: color-mix(in oklab, var(--cream) 88%, var(--ink)); }
-.hero-lede { font-size: clamp(17px, 1.5vw, 21px); max-width: 46ch; margin-top: 32px; color: var(--cream-soft); }
-.hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
+.hero-lede { font-size: clamp(16px, 1.4vw, 20px); max-width: 46ch; margin-top: 24px; color: var(--cream-soft); }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
 .hero-aside { /* columna derecha: año grande */
   text-align: right; align-self: end; border-left: 1px solid var(--line-dark); padding-left: clamp(20px,3vw,44px);
 }
