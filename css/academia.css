@@ -253,9 +253,7 @@ a { color: inherit; }
    ============================================================ */
 .hero {
   border-bottom: 1px solid var(--line);
-  background:
-    radial-gradient(1100px 500px at 85% -10%, var(--cream-deep) 0%, transparent 65%),
-    var(--page);
+  background: var(--white);
 }
 .hero .wrap {
   display: grid;
@@ -386,6 +384,9 @@ a { color: inherit; }
   padding-bottom: var(--section-pad);
 }
 .section--cream { background: var(--cream); }
+/* Academia: hero, El método (#metodo) y La formación (#cursos) en blanco
+   para diferenciarla de la web de las clínicas (crema). */
+#metodo, #cursos { background: var(--white); }
 .section-head {
   max-width: 720px;
   margin-bottom: clamp(40px, 5vw, 64px);
