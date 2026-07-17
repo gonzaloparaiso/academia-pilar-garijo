@@ -244,6 +244,8 @@ img { display: block; max-width: 100%; }
 .field input[aria-invalid="true"] { border-bottom-color: #a03d2e; }
 .field .error { font-size: 12.5px; color: #a03d2e; display: none; }
 .field.invalid .error { display: block; }
+.field .hint { font-size: 12.5px; color: var(--ink-faint); }
+.field.invalid .hint { display: none; }
 .consent { display: flex; gap: 12px; align-items: flex-start; font-size: 13px; color: var(--ink-soft); line-height: 1.5; }
 .consent input { appearance: none; width: 18px; height: 18px; flex: none; margin-top: 2px; border: 1px solid var(--ink-faint); cursor: pointer; display: grid; place-items: center; }
 .consent input:checked { background: var(--ink); border-color: var(--ink); }

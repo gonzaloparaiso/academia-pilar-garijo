@@ -223,8 +223,9 @@
         </div>
         <div class="field" style="margin-top:16px;">
           <label for="f-telefono" data-i18n="Teléfono">Teléfono</label>
-          <input id="f-telefono" name="telefono" type="tel" autocomplete="tel" placeholder="600 000 000">
-          <span class="error" data-i18n="Revisa el teléfono">Revisa el teléfono</span>
+          <input id="f-telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel" placeholder="+34 600 000 000">
+          <span class="hint" data-i18n="Formato internacional, ej. +34 600 000 000">Formato internacional, ej. +34 600 000 000</span>
+          <span class="error" data-i18n="Escribe tu teléfono en formato internacional (ej. +34 600 000 000)">Escribe tu teléfono en formato internacional (ej. +34 600 000 000)</span>
         </div>
         <label class="consent" id="consent-row" style="margin-top:22px;">
           <input type="checkbox" id="f-consent" name="consentimiento">
@@ -349,7 +350,7 @@
     if (!nombre.value.trim()) { setInvalid(nombre, true); ok = false; } else { setInvalid(nombre, false); }
     var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
     if (!emailOk) { setInvalid(email, true); ok = false; } else { setInvalid(email, false); }
-    var telOk = telefono.value.replace(/[^0-9]/g, '').length >= 9;
+    var telOk = /^\+[1-9]\d{6,14}$/.test(telefono.value.trim().replace(/[\s().-]/g, ''));
     if (!telOk) { setInvalid(telefono, true); ok = false; } else { setInvalid(telefono, false); }
     consentRow.classList.toggle('invalid', !consent.checked);
     if (!consent.checked) ok = false;
@@ -438,7 +439,8 @@
     "Email": "Email",
     "Revisa el email": "Check the email",
     "Teléfono": "Phone",
-    "Revisa el teléfono": "Check the phone number",
+    "Formato internacional, ej. +34 600 000 000": "International format, e.g. +34 600 000 000",
+    "Escribe tu teléfono en formato internacional (ej. +34 600 000 000)": "Enter your phone in international format (e.g. +34 600 000 000)",
     "Acepto recibir comunicaciones de la Academia Pilar Garijo y la": "I agree to receive communications from the Pilar Garijo Academy and the",
     "política de privacidad": "privacy policy",
     ". Podrás darte de baja en cualquier momento.": ". You can unsubscribe at any time.",

@@ -48,6 +48,8 @@ body.solo { margin: 0; min-height: 100dvh; display: flex; flex-direction: column
 .solo-card .field label { font-family: var(--font-label); font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
 .solo-card .req { color: #b3352c; font-family: var(--font-body); }
 .solo-card .req-note { font-size: 11.5px; color: var(--ink-faint); margin: -8px 0 0; }
+.solo-card .field .hint { font-size: 11.5px; color: var(--ink-faint); margin-top: -1px; }
+.solo-card .field.invalid .hint { display: none; }
 .solo-card .field input {
   font-family: var(--font-body); font-size: 15.5px; font-weight: 400; color: var(--ink);
   background: var(--cream-bg); border: 1.5px solid var(--line); border-radius: 10px;
