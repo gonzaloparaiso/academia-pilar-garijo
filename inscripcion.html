@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academia Pilar Garijo — Inscripción</title>
+<meta name="description" content="Apúntate a la Academia Pilar Garijo: déjanos tus datos y te avisaremos antes que a nadie de la apertura de inscripciones.">
+<!--
+  Academia Pilar Garijo — página de inscripción
+  · Formulario de leads: Nombre, Apellidos, Email, Teléfono.
+  · Pon la URL del webhook de Make en data-endpoint del <form id="lead-form">.
+    El formulario envía un POST con JSON: { nombre, apellidos, email, telefono, pagina, fecha }.
+-->
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/academia.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="ah" id="ah">
+  <div class="shell ah-row">
+    <a class="ah-logo" href="index.html">
+      <img src="assets/logo-light.png" alt="Pilar Garijo">
+      <span class="lbl" data-i18n="Academia">Academia</span>
+    </a>
+    <nav class="ah-nav">
+      <a href="index.html" data-i18n="Inicio">Inicio</a>
+      <a href="index.html#metodo" data-i18n="El método">El método</a>
+      <a href="index.html#pilar" data-i18n="Pilar Garijo">Pilar Garijo</a>
+      <a href="index.html#cursos" data-i18n="Cursos">Cursos</a>
+      <a href="inscripcion.html" class="on" data-i18n="Inscripción">Inscripción</a>
+    </nav>
+    <div class="ah-actions">
+      <div class="ah-lang" role="group" aria-label="Idioma">
+        <button type="button" data-lang="es" class="on">ES</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+      <a class="ah-priv" href="area-privada.html" data-i18n="Área privada">Área privada</a>
+      <button class="ah-burger" type="button" aria-label="Menú" data-open-drawer>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- mobile drawer -->
+<div class="a-drawer" id="drawer">
+  <button class="d-close" type="button" aria-label="Cerrar" data-close-drawer><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <a href="index.html" data-close-drawer data-i18n="Inicio">Inicio</a>
+  <a href="index.html#metodo" data-close-drawer data-i18n="El método">El método</a>
+  <a href="index.html#pilar" data-close-drawer data-i18n="Pilar Garijo">Pilar Garijo</a>
+  <a href="index.html#cursos" data-close-drawer data-i18n="Cursos">Cursos</a>
+  <a href="inscripcion.html" data-close-drawer data-i18n="Inscripción">Inscripción</a>
+  <a href="area-privada.html" data-close-drawer data-i18n="Área privada">Área privada</a>
+</div>
+
+<!-- ============ INTRO ============ -->
+<section class="hero on-dark" id="top" style="padding-bottom: clamp(50px,7vw,86px);">
+  <div class="shell">
+    <div class="hero-grid" style="grid-template-columns: 1fr;">
+      <div>
+        <span class="tag"><span class="n">—</span> <span data-i18n="Inscripción">Inscripción</span></span>
+        <h1 style="font-size: clamp(38px, 5.2vw, 64px);">Apúntate a <em>la Academia.</em></h1>
+        <p class="hero-lede" data-i18n="Déjanos tus datos y te avisaremos antes que a nadie de la apertura de inscripciones, las plazas y cada nuevo fascículo.">Déjanos tus datos y te avisaremos antes que a nadie de la apertura de inscripciones, las plazas y cada nuevo fascículo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORMULARIO ============ -->
+<section class="register" id="registro-academia" style="padding-top: clamp(40px,6vw,64px);">
+  <div class="shell" style="grid-template-columns: 1fr; max-width: 640px;">
+    <div class="lead-form reveal in" id="lead-form-card">
+      <form id="lead-form" data-endpoint="" novalidate>
+        <h3 style="margin-bottom:6px;" data-i18n="Tus datos">Tus datos</h3>
+        <div class="field" style="margin-top:16px;">
+          <label for="f-nombre" data-i18n="Nombre">Nombre</label>
+          <input id="f-nombre" name="nombre" type="text" autocomplete="given-name" placeholder="Tu nombre">
+          <span class="error" data-i18n="Escribe tu nombre">Escribe tu nombre</span>
+        </div>
+        <div class="field" style="margin-top:16px;">
+          <label for="f-apellidos" data-i18n="Apellidos">Apellidos</label>
+          <input id="f-apellidos" name="apellidos" type="text" autocomplete="family-name" placeholder="Tus apellidos">
+          <span class="error" data-i18n="Escribe tus apellidos">Escribe tus apellidos</span>
+        </div>
+        <div class="field" style="margin-top:16px;">
+          <label for="f-email" data-i18n="Email">Email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" placeholder="tu@email.com">
+          <span class="error" data-i18n="Revisa el email">Revisa el email</span>
+        </div>
+        <div class="field" style="margin-top:16px;">
+          <label for="f-telefono" data-i18n="Teléfono">Teléfono</label>
+          <input id="f-telefono" name="telefono" type="tel" autocomplete="tel" placeholder="600 000 000">
+          <span class="error" data-i18n="Revisa el teléfono">Revisa el teléfono</span>
+        </div>
+        <label class="consent" id="consent-row" style="margin-top:22px;">
+          <input type="checkbox" id="f-consent" name="consentimiento">
+          <span><span data-i18n="Acepto recibir comunicaciones de la Academia Pilar Garijo y la">Acepto recibir comunicaciones de la Academia Pilar Garijo y la</span> <a href="index.html#politica" data-i18n="política de privacidad">política de privacidad</a><span data-i18n=". Podrás darte de baja en cualquier momento.">. Podrás darte de baja en cualquier momento.</span></span>
+        </label>
+        <button class="cta cta--fill" type="submit" style="margin-top:22px;" data-i18n="Enviar inscripción">Enviar inscripción</button>
+        <p class="form-note" style="margin-top:10px;" data-i18n="Sin spam. Solo información de la academia.">Sin spam. Solo información de la academia.</p>
+      </form>
+      <div class="form-success">
+        <div class="seal">
+          <svg width="32" height="32" viewBox="0 0 34 34" fill="none" aria-hidden="true"><path d="M8 18 L14.5 24.5 L26 11" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </div>
+        <h3 data-i18n="Ya estás dentro.">Ya estás dentro.</h3>
+        <p data-i18n="Te avisaremos antes que a nadie cuando abramos la inscripción de septiembre.">Te avisaremos antes que a nadie cuando abramos la inscripción de septiembre.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="a-footer">
+  <div class="footer-motif" aria-hidden="true"></div>
+  <div class="shell">
+    <div class="f-brand">
+      <a href="index.html" aria-label="Pilar Garijo Academia"><img src="assets/logo-light.png" alt="Pilar Garijo"></a>
+      <p class="f-blurb" data-i18n="Formación profesional en el Método Garijo. Una academia solo para profesionales, desde 1994.">Formación profesional en el Método Garijo. Una academia solo para profesionales, desde 1994.</p>
+    </div>
+    <div>
+      <h5 data-i18n="Academia">Academia</h5>
+      <ul>
+        <li><a href="index.html" data-i18n="Inicio">Inicio</a></li>
+        <li><a href="index.html#metodo" data-i18n="El método">El método</a></li>
+        <li><a href="index.html#cursos" data-i18n="Cursos">Cursos</a></li>
+        <li><a href="area-privada.html" data-i18n="Área privada">Área privada</a></li>
+        <li><a href="https://gonzaloparaiso.github.io/centros-pilar-garijo/" target="_blank" rel="noopener">Centros Pilar Garijo ↗</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5 data-i18n="Contacto">Contacto</h5>
+      <ul>
+        <li><a href="mailto:hola@pilargarijo.com">hola@pilargarijo.com</a></li>
+      </ul>
+      <div class="f-social">
+        <a href="https://www.instagram.com/centrospilargarijo.quiromasaje" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2z"/></svg></a>
+        <a href="https://www.facebook.com/centroquiromasajepilargarijo/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+        <a href="mailto:hola@pilargarijo.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.5L20 7H4l8 5.5zM4 8.8V18h16V8.8l-7.4 5.1a1 1 0 0 1-1.2 0L4 8.8z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <div class="shell">
+      <span data-i18n="Centros de Quiromasaje Pilar Garijo">Centros de Quiromasaje Pilar Garijo</span>
+      <span><a href="index.html#politica" data-i18n="política de privacidad">Política de privacidad</a> · © 2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ Comportamiento ============ -->
+<script>
+(function () {
+  // Header scroll-aware
+  var ah = document.getElementById('ah');
+  var onScroll = function () { ah.classList.toggle('is-stuck', window.scrollY > 24); };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Drawer móvil
+  var drawer = document.getElementById('drawer');
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest('[data-open-drawer],[data-close-drawer]');
+    if (!t) return;
+    if (t.hasAttribute('data-open-drawer')) drawer.classList.add('open');
+    if (t.hasAttribute('data-close-drawer')) drawer.classList.remove('open');
+  });
+
+  // Formulario
+  var form = document.getElementById('lead-form');
+  var card = document.getElementById('lead-form-card');
+  function setInvalid(input, invalid) {
+    var field = input.closest('.field');
+    if (field) field.classList.toggle('invalid', invalid);
+    input.setAttribute('aria-invalid', invalid ? 'true' : 'false');
+  }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var nombre = document.getElementById('f-nombre');
+    var apellidos = document.getElementById('f-apellidos');
+    var email = document.getElementById('f-email');
+    var telefono = document.getElementById('f-telefono');
+    var consent = document.getElementById('f-consent');
+    var consentRow = document.getElementById('consent-row');
+    var ok = true;
+    if (!nombre.value.trim()) { setInvalid(nombre, true); ok = false; } else { setInvalid(nombre, false); }
+    if (!apellidos.value.trim()) { setInvalid(apellidos, true); ok = false; } else { setInvalid(apellidos, false); }
+    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
+    if (!emailOk) { setInvalid(email, true); ok = false; } else { setInvalid(email, false); }
+    var telOk = telefono.value.replace(/[^0-9]/g, '').length >= 9;
+    if (!telOk) { setInvalid(telefono, true); ok = false; } else { setInvalid(telefono, false); }
+    consentRow.classList.toggle('invalid', !consent.checked);
+    if (!consent.checked) ok = false;
+    if (!ok) return;
+    var endpoint = form.getAttribute('data-endpoint');
+    if (endpoint) {
+      fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nombre: nombre.value.trim(),
+          apellidos: apellidos.value.trim(),
+          email: email.value.trim(),
+          telefono: telefono.value.trim(),
+          pagina: 'academia-inscripcion',
+          fecha: new Date().toISOString()
+        })
+      }).catch(function () {});
+    }
+    card.classList.add('sent');
+  });
+
+  // Reveal
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (prefersReduced || !('IntersectionObserver' in window)) {
+    els.forEach(function (el) { el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0.12 });
+    els.forEach(function (el) { io.observe(el); });
+  }
+})();
+</script>
+
+<!-- ============ Idioma ES / EN ============ -->
+<script>
+(function () {
+  var EN = {
+    "Inicio": "Home",
+    "El método": "The method",
+    "Pilar Garijo": "Pilar Garijo",
+    "Cursos": "Courses",
+    "Inscripción": "Enrolment",
+    "Área privada": "Private area",
+    "Academia": "Academy",
+    "Apúntate a": "Sign up for",
+    "la Academia.": "the Academy.",
+    "Déjanos tus datos y te avisaremos antes que a nadie de la apertura de inscripciones, las plazas y cada nuevo fascículo.": "Leave us your details and we'll let you know before anyone else about enrolment opening, places and every new instalment.",
+    "Tus datos": "Your details",
+    "Nombre": "First name",
+    "Escribe tu nombre": "Enter your first name",
+    "Apellidos": "Last name",
+    "Escribe tus apellidos": "Enter your last name",
+    "Email": "Email",
+    "Revisa el email": "Check the email",
+    "Teléfono": "Phone",
+    "Revisa el teléfono": "Check the phone number",
+    "Acepto recibir comunicaciones de la Academia Pilar Garijo y la": "I agree to receive communications from the Pilar Garijo Academy and the",
+    "política de privacidad": "privacy policy",
+    ". Podrás darte de baja en cualquier momento.": ". You can unsubscribe at any time.",
+    "Enviar inscripción": "Submit",
+    "Sin spam. Solo información de la academia.": "No spam. Only academy information.",
+    "Ya estás dentro.": "You're in.",
+    "Te avisaremos antes que a nadie cuando abramos la inscripción de septiembre.": "We'll let you know before anyone else when September enrolment opens.",
+    "Formación profesional en el Método Garijo. Una academia solo para profesionales, desde 1994.": "Professional training in the Garijo Method. An academy for professionals only, since 1994.",
+    "Contacto": "Contact",
+    "Centros de Quiromasaje Pilar Garijo": "Pilar Garijo Chiromassage Centres"
+  };
+
+  var originals = new Map();
+  function cache(node) { if (!originals.has(node)) originals.set(node, node.nodeValue); }
+  function walk(apply) {
+    var tw = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+    var n;
+    while ((n = tw.nextNode())) {
+      var raw = n.nodeValue;
+      if (!raw || !raw.trim()) continue;
+      var key = raw.trim();
+      if (apply) { if (EN[key]) { cache(n); n.nodeValue = raw.replace(key, EN[key]); } }
+      else if (originals.has(n)) { n.nodeValue = originals.get(n); }
+    }
+  }
+  function setLang(lang) {
+    document.documentElement.setAttribute('lang', lang === 'en' ? 'en' : 'es');
+    walk(lang === 'en');
+    document.querySelectorAll('.ah-lang button').forEach(function (b) { b.classList.toggle('on', b.getAttribute('data-lang') === lang); });
+    try { localStorage.setItem('pg_lang', lang); } catch (e) {}
+  }
+  document.querySelectorAll('.ah-lang button').forEach(function (b) {
+    b.addEventListener('click', function () { setLang(b.getAttribute('data-lang')); });
+  });
+  var saved = 'es';
+  try { saved = localStorage.getItem('pg_lang') || 'es'; } catch (e) {}
+  if (saved === 'en') setLang('en');
+})();
+</script>
+
+</body>
+</html>

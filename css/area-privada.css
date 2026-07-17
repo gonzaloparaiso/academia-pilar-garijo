@@ -14,8 +14,9 @@
   --ink-soft: color-mix(in oklab, var(--ink) 72%, var(--white));
   --ink-faint: color-mix(in oklab, var(--ink) 52%, var(--white));
 
-  --font-display: "Newsreader", Georgia, serif;
-  --font-body: "Hanken Grotesk", system-ui, sans-serif;
+  --font-display: "Season Sans", system-ui, sans-serif;
+  --font-body: "Season Sans", system-ui, sans-serif;
+  --font-label: "GT Pressura", system-ui, sans-serif;
   --radius: 2px;
 }
 
@@ -71,6 +72,7 @@ button { font-family: var(--font-body); }
 .btn--ghost:hover { background: var(--ink); color: var(--white); }
 
 .kicker {
+  font-family: var(--font-label);
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.24em;
@@ -117,6 +119,7 @@ button { font-family: var(--font-body); }
   letter-spacing: 0.06em;
 }
 .login-card .wordmark > span {
+  font-family: var(--font-label);
   font-size: 10px;
   font-weight: 500;
   letter-spacing: 0.32em;
@@ -219,6 +222,7 @@ button { font-family: var(--font-body); }
   letter-spacing: 0.06em;
 }
 .app-header .wordmark > span {
+  font-family: var(--font-label);
   font-size: 10px;
   font-weight: 500;
   letter-spacing: 0.28em;
@@ -249,6 +253,7 @@ button { font-family: var(--font-body); }
   background: none;
   border: none;
   cursor: pointer;
+  font-family: var(--font-label);
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.12em;
@@ -302,6 +307,7 @@ button { font-family: var(--font-body); }
   transition: width 0.4s ease;
 }
 .progress > span {
+  font-family: var(--font-label);
   font-size: 11.5px;
   font-weight: 400;
   letter-spacing: 0.12em;
@@ -316,6 +322,7 @@ button { font-family: var(--font-body); }
 }
 .module-label {
   padding: 20px 28px 8px;
+  font-family: var(--font-label);
   font-size: 10.5px;
   font-weight: 500;
   letter-spacing: 0.22em;
@@ -423,6 +430,7 @@ button { font-family: var(--font-body); }
   position: absolute;
   left: 24px;
   bottom: 18px;
+  font-family: var(--font-label);
   font-size: 11.5px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -432,6 +440,7 @@ button { font-family: var(--font-body); }
   position: absolute;
   right: 24px;
   bottom: 18px;
+  font-family: var(--font-label);
   font-size: 11.5px;
   letter-spacing: 0.14em;
   color: color-mix(in oklab, var(--white) 55%, var(--ink));
@@ -460,6 +469,7 @@ button { font-family: var(--font-body); }
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 9px 18px;
+  font-family: var(--font-label);
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.12em;

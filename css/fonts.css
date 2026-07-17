@@ -1,0 +1,58 @@
+/* ============================================================
+   Pilar Garijo — tipografía de marca
+   Season Sans: títulos y cuerpo de texto (Light · Regular · Medium + itálicas)
+   GT Pressura: subtítulos / etiquetas en mayúsculas
+   ============================================================ */
+
+@font-face {
+  font-family: "Season Sans";
+  src: url("../assets/fonts/season-sans-light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Season Sans";
+  src: url("../assets/fonts/season-sans-light-italic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Season Sans";
+  src: url("../assets/fonts/season-sans-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Season Sans";
+  src: url("../assets/fonts/season-sans-regular-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Season Sans";
+  src: url("../assets/fonts/season-sans-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Season Sans";
+  src: url("../assets/fonts/season-sans-medium-italic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+/* Season Sans no incluye un corte "bold": los usos de font-weight 600-800
+   (nav, botones, etiquetas) recurren al negrita sintético del navegador. */
+
+@font-face {
+  font-family: "GT Pressura";
+  src: url("../assets/fonts/gt-pressura-regular.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}

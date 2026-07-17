@@ -7,14 +7,12 @@
 <meta name="description" content="Academia Pilar Garijo: formación en el Método Garijo para masajistas y quiromasajistas en activo. Curso de Masaje (septiembre) y Curso de Colocación y Manipulación por fascículos.">
 <!--
   Academia Pilar Garijo — landing v2 (editorial "dossier")
-  · Marca: blanco / negro / #231a04 (+ crema). Tipografía: Newsreader + Hanken Grotesk.
+  · Marca: blanco / negro / #231a04 (+ crema). Tipografía: Season Sans + GT Pressura.
   · Mismo contenido que la v1; estructura y diseño completamente distintos.
   · Formulario: pon la URL de tu mailing en data-endpoint del <form id="lead-form">.
   · Fotos: sustituye los <img> de assets/fotos por las definitivas.
 -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/academia.css">
 </head>
 <body>
@@ -31,6 +29,7 @@
       <a href="#metodo" data-i18n="El método">El método</a>
       <a href="#pilar" data-i18n="Pilar Garijo">Pilar Garijo</a>
       <a href="#cursos" data-i18n="Cursos">Cursos</a>
+      <a href="inscripcion.html" data-i18n="Inscripción">Inscripción</a>
     </nav>
     <div class="ah-actions">
       <div class="ah-lang" role="group" aria-label="Idioma">
@@ -52,6 +51,7 @@
   <a href="#metodo" data-close-drawer data-i18n="El método">El método</a>
   <a href="#pilar" data-close-drawer data-i18n="Pilar Garijo">Pilar Garijo</a>
   <a href="#cursos" data-close-drawer data-i18n="Cursos">Cursos</a>
+  <a href="inscripcion.html" data-close-drawer data-i18n="Inscripción">Inscripción</a>
   <a href="area-privada.html" data-close-drawer data-i18n="Área privada">Área privada</a>
 </div>
 
@@ -64,7 +64,7 @@
         <h1>El Método Garijo, <em>de profesional a profesional.</em></h1>
         <p class="hero-lede" data-i18n="Más de treinta años de terapia manual condensados en una formación pensada exclusivamente para masajistas y quiromasajistas en activo. Aprende el método directamente de su creadora.">Más de treinta años de terapia manual condensados en una formación pensada exclusivamente para masajistas y quiromasajistas en activo. Aprende el método directamente de su creadora.</p>
         <div class="hero-ctas">
-          <a class="cta cta--fill" href="#registro" data-i18n="Quiero saber más">Quiero saber más</a>
+          <a class="cta cta--fill" href="inscripcion.html" data-i18n="Quiero saber más">Quiero saber más</a>
           <a class="cta cta--line" href="#cursos" data-i18n="Ver cursos">Ver cursos</a>
         </div>
       </div>
@@ -168,7 +168,7 @@
         </div>
         <div class="c-side">
           <div class="c-price">497&nbsp;€<small data-i18n="Pago único">Pago único</small></div>
-          <a class="cta cta--fill" href="#registro" data-i18n="Reservar mi plaza">Reservar mi plaza</a>
+          <a class="cta cta--fill" href="inscripcion.html" data-i18n="Reservar mi plaza">Reservar mi plaza</a>
         </div>
       </article>
 
@@ -187,7 +187,7 @@
         </div>
         <div class="c-side">
           <div class="c-price" data-i18n="Próximamente">Próximamente</div>
-          <a class="cta cta--line" href="#registro" data-i18n="Avísame cuando salga">Avísame cuando salga</a>
+          <a class="cta cta--line" href="inscripcion.html" data-i18n="Avísame cuando salga">Avísame cuando salga</a>
         </div>
       </article>
 
@@ -276,6 +276,7 @@
 
 <!-- ============ FOOTER ============ -->
 <footer class="a-footer">
+  <div class="footer-motif" aria-hidden="true"></div>
   <div class="shell">
     <div class="f-brand">
       <a href="#top" aria-label="Pilar Garijo Academia"><img src="assets/logo-light.png" alt="Pilar Garijo"></a>
@@ -380,6 +381,7 @@
     "El método": "The method",
     "Pilar Garijo": "Pilar Garijo",
     "Cursos": "Courses",
+    "Inscripción": "Enrolment",
     "Área privada": "Private area",
     "Academia": "Academy",
     "Para profesionales": "For professionals",
