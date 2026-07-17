@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academia Pilar Garijo — Formación profesional en el Método Garijo</title>
+<meta name="description" content="Academia Pilar Garijo: formación en el Método Garijo para masajistas y quiromasajistas en activo. Curso de Masaje (septiembre) y Curso de Colocación y Manipulación por fascículos.">
+<!--
+  Academia Pilar Garijo — landing v2 (editorial "dossier")
+  · Marca: blanco / negro / #231a04 (+ crema). Tipografía: Season Sans + GT Pressura.
+  · Mismo contenido que la v1; estructura y diseño completamente distintos.
+  · Formulario: pon la URL de tu mailing en data-endpoint del <form id="lead-form">.
+  · Fotos: sustituye los <img> de assets/fotos por las definitivas.
+-->
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/academia.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="ah" id="ah">
+  <div class="shell ah-row">
+    <a class="ah-logo" href="#top">
+      <img src="assets/logo-light.png" alt="Pilar Garijo">
+      <span class="lbl" data-i18n="Academia">Academia</span>
+    </a>
+    <nav class="ah-nav">
+      <a href="#top" data-i18n="Inicio">Inicio</a>
+      <a href="#metodo" data-i18n="El método">El método</a>
+      <a href="#pilar" data-i18n="Pilar Garijo">Pilar Garijo</a>
+      <a href="#cursos" data-i18n="Cursos">Cursos</a>
+      <a href="inscripcion.html" data-i18n="Inscripción">Inscripción</a>
+    </nav>
+    <div class="ah-actions">
+      <div class="ah-lang" role="group" aria-label="Idioma">
+        <button type="button" data-lang="es" class="on">ES</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+      <a class="ah-priv" href="area-privada.html" data-i18n="Área privada">Área privada</a>
+      <button class="ah-burger" type="button" aria-label="Menú" data-open-drawer>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- mobile drawer -->
+<div class="a-drawer" id="drawer">
+  <button class="d-close" type="button" aria-label="Cerrar" data-close-drawer><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <a href="#top" data-close-drawer data-i18n="Inicio">Inicio</a>
+  <a href="#metodo" data-close-drawer data-i18n="El método">El método</a>
+  <a href="#pilar" data-close-drawer data-i18n="Pilar Garijo">Pilar Garijo</a>
+  <a href="#cursos" data-close-drawer data-i18n="Cursos">Cursos</a>
+  <a href="inscripcion.html" data-close-drawer data-i18n="Inscripción">Inscripción</a>
+  <a href="area-privada.html" data-close-drawer data-i18n="Área privada">Área privada</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero on-dark" id="top">
+  <div class="shell">
+    <div class="hero-grid">
+      <div>
+        <span class="tag"><span class="n">01</span> <span data-i18n="Formación para profesionales del masaje">Formación para profesionales del masaje</span></span>
+        <h1>El Método Garijo, <em>de profesional a profesional.</em></h1>
+        <p class="hero-lede" data-i18n="Más de treinta años de terapia manual condensados en una formación pensada exclusivamente para masajistas y quiromasajistas en activo. Aprende el método directamente de su creadora.">Más de treinta años de terapia manual condensados en una formación pensada exclusivamente para masajistas y quiromasajistas en activo. Aprende el método directamente de su creadora.</p>
+        <div class="hero-ctas">
+          <a class="cta cta--fill" href="inscripcion.html" data-i18n="Quiero saber más">Quiero saber más</a>
+          <a class="cta cta--line" href="#cursos" data-i18n="Ver cursos">Ver cursos</a>
+        </div>
+      </div>
+      <div class="hero-aside">
+        <div class="since" data-i18n="Trabajando el método desde">Trabajando el método desde</div>
+        <div class="year">1994</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CIFRAS ============ -->
+<section class="figures">
+  <div class="shell">
+    <div class="figure reveal"><b>+25.000</b><span data-i18n="Personas tratadas con éxito">Personas tratadas con éxito</span></div>
+    <div class="figure reveal"><b>+30</b><span data-i18n="Trabajando el método desde">años con el método propio</span></div>
+    <div class="figure reveal"><b data-i18n="Propio">Propio</b><span data-i18n="Un método único y probado">Un método único y probado</span></div>
+  </div>
+</section>
+
+<!-- ============ MANIFIESTO ============ -->
+<section class="manifesto on-dark">
+  <div class="shell">
+    <span class="tag"><span class="n">—</span> <span data-i18n="Para profesionales">Para profesionales</span></span>
+    <p><b data-i18n="Una academia solo para profesionales.">Una academia solo para profesionales.</b> <span data-i18n="Esta formación no es de iniciación. Está dirigida a masajistas y quiromasajistas que ya ejercen y quieren incorporar el Método Garijo a su consulta: protocolos reales, criterio clínico y técnica depurada durante más de tres décadas.">Esta formación no es de iniciación. Está dirigida a masajistas y quiromasajistas que ya ejercen y quieren incorporar el Método Garijo a su consulta: protocolos reales, criterio clínico y técnica depurada durante más de tres décadas.</span></p>
+  </div>
+</section>
+
+<!-- ============ EL MÉTODO ============ -->
+<section class="method" id="metodo">
+  <div class="shell">
+    <div class="section-intro reveal">
+      <div>
+        <span class="tag"><span class="n">02</span> <span data-i18n="El Método Garijo">El Método Garijo</span></span>
+        <h2 style="margin-top:22px;" data-i18n="Un método propio, probado en más de 25.000 personas.">Un método propio, probado en más de 25.000 personas.</h2>
+      </div>
+      <p class="lead" data-i18n="Desde 1994, en los Centros de Quiromasaje Pilar Garijo ofrecemos soluciones de la mejor calidad basadas en terapias manuales, con un método propio de probado éxito.">Desde 1994, en los Centros de Quiromasaje Pilar Garijo ofrecemos soluciones de la mejor calidad basadas en terapias manuales, con un método propio de probado éxito.</p>
+    </div>
+    <div class="steps">
+      <article class="step reveal">
+        <div class="num">01</div>
+        <div class="step-in">
+          <h3 data-i18n="Terapia manual pura">Terapia manual pura</h3>
+          <p data-i18n="Sin aparatología ni atajos: manos, anatomía y criterio. El método trabaja la causa, no solo el síntoma, con técnicas refinadas consulta a consulta desde 1994.">Sin aparatología ni atajos: manos, anatomía y criterio. El método trabaja la causa, no solo el síntoma, con técnicas refinadas consulta a consulta desde 1994.</p>
+        </div>
+      </article>
+      <article class="step reveal">
+        <div class="num">02</div>
+        <div class="step-in">
+          <h3 data-i18n="Protocolos que funcionan">Protocolos que funcionan</h3>
+          <p data-i18n="Cada técnica del método ha pasado por miles de camillas antes de llegar a la academia. Te llevas protocolos completos, listos para aplicar con tus propios clientes desde el primer día.">Cada técnica del método ha pasado por miles de camillas antes de llegar a la academia. Te llevas protocolos completos, listos para aplicar con tus propios clientes desde el primer día.</p>
+        </div>
+      </article>
+      <article class="step reveal">
+        <div class="num">03</div>
+        <div class="step-in">
+          <h3 data-i18n="De su creadora, sin intermediarios">De su creadora, sin intermediarios</h3>
+          <p data-i18n="El método lo enseña quien lo creó. Pilar transmite no solo la técnica, sino el ojo clínico y los matices que no caben en un manual.">El método lo enseña quien lo creó. Pilar transmite no solo la técnica, sino el ojo clínico y los matices que no caben en un manual.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PILAR ============ -->
+<section class="pilar" id="pilar">
+  <div class="shell">
+    <figure class="pilar-figure reveal" style="margin:0;">
+      <img src="assets/fotos/pilar-retrato.jpg" alt="Retrato de Pilar Garijo">
+    </figure>
+    <div class="reveal">
+      <span class="tag"><span class="n">03</span> <span data-i18n="Quién enseña">Quién enseña</span></span>
+      <h2 data-i18n="Pilar Garijo">Pilar Garijo</h2>
+      <div class="bio">
+        <p data-i18n="Fundadora de los Centros de Quiromasaje Pilar Garijo, Pilar lleva desde 1994 dedicada en exclusiva a la terapia manual. En estos años ha tratado con éxito a más de veinticinco mil personas y ha convertido su experiencia en un método propio.">Fundadora de los Centros de Quiromasaje Pilar Garijo, Pilar lleva desde 1994 dedicada en exclusiva a la terapia manual. En estos años ha tratado con éxito a más de veinticinco mil personas y ha convertido su experiencia en un método propio.</p>
+        <p data-i18n="Ahora, por primera vez, abre ese método a otros profesionales: la academia nace para que masajistas y quiromasajistas puedan formarse directamente con ella.">Ahora, por primera vez, abre ese método a otros profesionales: la academia nace para que masajistas y quiromasajistas puedan formarse directamente con ella.</p>
+      </div>
+      <p class="sign" data-i18n="— Pilar Garijo">— Pilar Garijo</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CURSOS ============ -->
+<section class="courses on-dark" id="cursos">
+  <div class="shell">
+    <div class="section-intro reveal">
+      <div>
+        <span class="tag"><span class="n">04</span> <span data-i18n="La formación">La formación</span></span>
+        <h2 style="margin-top:22px;" data-i18n="Los cursos de la academia">Los cursos de la academia</h2>
+      </div>
+    </div>
+    <div class="course-list">
+
+      <article class="course reveal">
+        <div class="c-index">01</div>
+        <div class="c-main">
+          <span class="c-status"><span data-i18n="Inscripción abierta">Inscripción abierta</span></span>
+          <h3 data-i18n="Curso de Masaje">Curso de Masaje</h3>
+          <div class="c-when" data-i18n="Septiembre 2026">Septiembre 2026</div>
+          <p class="c-desc" data-i18n="La formación completa en el masaje del método: la base sobre la que se construye todo el trabajo de los centros Pilar Garijo.">La formación completa en el masaje del método: la base sobre la que se construye todo el trabajo de los centros Pilar Garijo.</p>
+        </div>
+        <div class="c-side">
+          <div class="c-price">497&nbsp;€<small data-i18n="Pago único">Pago único</small></div>
+          <a class="cta cta--fill" href="inscripcion.html" data-i18n="Reservar mi plaza">Reservar mi plaza</a>
+        </div>
+      </article>
+
+      <article class="course course--soon reveal">
+        <div class="c-index">02</div>
+        <div class="c-main">
+          <span class="c-status"><span data-i18n="Pronto disponible">Pronto disponible</span></span>
+          <h3 data-i18n="Curso de Colocación">Curso de Colocación y Manipulación</h3>
+          <div class="c-when" data-i18n="Noviembre 2026">Noviembre 2026</div>
+          <p class="c-desc" data-i18n="El segundo nivel del método, editado por fascículos para que avances bloque a bloque, a tu ritmo.">El segundo nivel del método, editado por fascículos para que avances bloque a bloque, a tu ritmo.</p>
+          <div class="c-blocks">
+            <span data-i18n="Bloque 1">Bloque 1</span>
+            <span data-i18n="Bloque 2">Bloque 2</span>
+            <span data-i18n="Bloque 3">Bloque 3</span>
+          </div>
+        </div>
+        <div class="c-side">
+          <div class="c-price" data-i18n="Próximamente">Próximamente</div>
+          <a class="cta cta--line" href="inscripcion.html" data-i18n="Avísame cuando salga">Avísame cuando salga</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ REGISTRO ============ -->
+<section class="register" id="registro">
+  <div class="shell">
+    <div class="reveal">
+      <span class="tag"><span class="n">05</span> <span data-i18n="Regístrate para saber más">Regístrate para saber más</span></span>
+      <h2 data-i18n="Sé el primero en enterarte.">Sé el primero en enterarte.</h2>
+      <p class="sub" data-i18n="Déjanos tus datos y te avisaremos antes que a nadie de la apertura de inscripciones, las plazas y cada nuevo fascículo.">Déjanos tus datos y te avisaremos antes que a nadie de la apertura de inscripciones, las plazas y cada nuevo fascículo.</p>
+      <ul class="reg-points">
+        <li data-i18n="Aviso prioritario al abrir la inscripción de septiembre">Aviso prioritario al abrir la inscripción de septiembre</li>
+        <li data-i18n="Lanzamiento de cada bloque del curso por fascículos">Lanzamiento de cada bloque del curso por fascículos</li>
+        <li data-i18n="Contenido del método, solo para profesionales">Contenido del método, solo para profesionales</li>
+      </ul>
+    </div>
+    <div class="lead-form reveal" id="lead-form-card">
+      <form id="lead-form" data-endpoint="" novalidate>
+        <h3 style="margin-bottom:6px;" data-i18n="Regístrate para saber más">Regístrate para saber más</h3>
+        <div class="field" style="margin-top:16px;">
+          <label for="f-nombre" data-i18n="Nombre">Nombre</label>
+          <input id="f-nombre" name="nombre" type="text" autocomplete="name" placeholder="Tu nombre">
+          <span class="error" data-i18n="Escribe tu nombre">Escribe tu nombre</span>
+        </div>
+        <div class="field" style="margin-top:16px;">
+          <label for="f-email" data-i18n="Email">Email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" placeholder="tu@email.com">
+          <span class="error" data-i18n="Revisa el email">Revisa el email</span>
+        </div>
+        <div class="field" style="margin-top:16px;">
+          <label for="f-telefono" data-i18n="Teléfono">Teléfono</label>
+          <input id="f-telefono" name="telefono" type="tel" autocomplete="tel" placeholder="600 000 000">
+          <span class="error" data-i18n="Revisa el teléfono">Revisa el teléfono</span>
+        </div>
+        <label class="consent" id="consent-row" style="margin-top:22px;">
+          <input type="checkbox" id="f-consent" name="consentimiento">
+          <span><span data-i18n="Acepto recibir comunicaciones de la Academia Pilar Garijo y la">Acepto recibir comunicaciones de la Academia Pilar Garijo y la</span> <a href="#politica" data-i18n="política de privacidad">política de privacidad</a><span data-i18n=". Podrás darte de baja en cualquier momento.">. Podrás darte de baja en cualquier momento.</span></span>
+        </label>
+        <button class="cta cta--fill" type="submit" style="margin-top:22px;" data-i18n="Quiero saber más">Quiero saber más</button>
+        <p class="form-note" style="margin-top:10px;" data-i18n="Sin spam. Solo información de la academia.">Sin spam. Solo información de la academia.</p>
+      </form>
+      <div class="form-success">
+        <div class="seal">
+          <svg width="32" height="32" viewBox="0 0 34 34" fill="none" aria-hidden="true"><path d="M8 18 L14.5 24.5 L26 11" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </div>
+        <h3 data-i18n="Ya estás dentro.">Ya estás dentro.</h3>
+        <p data-i18n="Te avisaremos antes que a nadie cuando abramos la inscripción de septiembre.">Te avisaremos antes que a nadie cuando abramos la inscripción de septiembre.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="shell">
+    <div class="section-intro reveal">
+      <div>
+        <span class="tag"><span class="n">06</span> <span data-i18n="Dudas frecuentes">Dudas frecuentes</span></span>
+        <h2 style="margin-top:22px;" data-i18n="Preguntas frecuentes">Preguntas frecuentes</h2>
+      </div>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary><span class="q-n">01</span><span class="q-t" data-i18n="¿Puedo apuntarme si no soy profesional?">¿Puedo apuntarme si no soy profesional?</span></summary>
+        <p class="a" data-i18n="No. La academia está pensada exclusivamente para masajistas y quiromasajistas en activo. Los contenidos dan por hecho que ya dominas la base de la profesión.">No. La academia está pensada exclusivamente para masajistas y quiromasajistas en activo. Los contenidos dan por hecho que ya dominas la base de la profesión.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span class="q-n">02</span><span class="q-t" data-i18n="¿Cuándo abre la inscripción del curso de masaje?">¿Cuándo abre la inscripción del curso de masaje?</span></summary>
+        <p class="a" data-i18n="En septiembre de 2026. Las plazas se anunciarán primero a las personas registradas en la lista — déjanos tus datos y te avisaremos antes que a nadie.">En septiembre de 2026. Las plazas se anunciarán primero a las personas registradas en la lista — déjanos tus datos y te avisaremos antes que a nadie.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span class="q-n">03</span><span class="q-t" data-i18n="¿Cómo funciona el curso por fascículos?">¿Cómo funciona el curso por fascículos?</span></summary>
+        <p class="a" data-i18n="El Curso de Colocación y Manipulación se publicará por bloques a partir de noviembre de 2026: Bloque 1, Bloque 2 y Bloque 3. Iremos anunciando el contenido y las fechas de cada uno.">El Curso de Colocación y Manipulación se publicará por bloques a partir de noviembre de 2026: Bloque 1, Bloque 2 y Bloque 3. Iremos anunciando el contenido y las fechas de cada uno.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span class="q-n">04</span><span class="q-t" data-i18n="¿Quién imparte la formación?">¿Quién imparte la formación?</span></summary>
+        <p class="a" data-i18n="Pilar Garijo, creadora del método y fundadora de los Centros de Quiromasaje Pilar Garijo, en activo desde 1994.">Pilar Garijo, creadora del método y fundadora de los Centros de Quiromasaje Pilar Garijo, en activo desde 1994.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="a-footer">
+  <div class="footer-motif" aria-hidden="true"></div>
+  <div class="shell">
+    <div class="f-brand">
+      <a href="#top" aria-label="Pilar Garijo Academia"><img src="assets/logo-light.png" alt="Pilar Garijo"></a>
+      <p class="f-blurb" data-i18n="Formación profesional en el Método Garijo. Una academia solo para profesionales, desde 1994.">Formación profesional en el Método Garijo. Una academia solo para profesionales, desde 1994.</p>
+    </div>
+    <div>
+      <h5 data-i18n="Academia">Academia</h5>
+      <ul>
+        <li><a href="#top" data-i18n="Inicio">Inicio</a></li>
+        <li><a href="#metodo" data-i18n="El método">El método</a></li>
+        <li><a href="#cursos" data-i18n="Cursos">Cursos</a></li>
+        <li><a href="area-privada.html" data-i18n="Área privada">Área privada</a></li>
+        <li><a href="https://gonzaloparaiso.github.io/centros-pilar-garijo/" target="_blank" rel="noopener">Centros Pilar Garijo ↗</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5 data-i18n="Contacto">Contacto</h5>
+      <ul>
+        <li><a href="mailto:hola@pilargarijo.com">hola@pilargarijo.com</a></li>
+      </ul>
+      <div class="f-social">
+        <a href="https://www.instagram.com/centrospilargarijo.quiromasaje" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2z"/></svg></a>
+        <a href="https://www.facebook.com/centroquiromasajepilargarijo/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+        <a href="mailto:hola@pilargarijo.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.5L20 7H4l8 5.5zM4 8.8V18h16V8.8l-7.4 5.1a1 1 0 0 1-1.2 0L4 8.8z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <div class="shell">
+      <span data-i18n="Centros de Quiromasaje Pilar Garijo">Centros de Quiromasaje Pilar Garijo</span>
+      <span><a href="#politica" id="politica" data-i18n="política de privacidad">Política de privacidad</a> · © 2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ Comportamiento ============ -->
+<script>
+(function () {
+  // Header scroll-aware
+  var ah = document.getElementById('ah');
+  var onScroll = function () { ah.classList.toggle('is-stuck', window.scrollY > 24); };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Drawer móvil
+  var drawer = document.getElementById('drawer');
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest('[data-open-drawer],[data-close-drawer]');
+    if (!t) return;
+    if (t.hasAttribute('data-open-drawer')) drawer.classList.add('open');
+    if (t.hasAttribute('data-close-drawer')) drawer.classList.remove('open');
+  });
+
+  // Formulario
+  var form = document.getElementById('lead-form');
+  var card = document.getElementById('lead-form-card');
+  function setInvalid(input, invalid) {
+    var field = input.closest('.field');
+    if (field) field.classList.toggle('invalid', invalid);
+    input.setAttribute('aria-invalid', invalid ? 'true' : 'false');
+  }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var nombre = document.getElementById('f-nombre');
+    var email = document.getElementById('f-email');
+    var telefono = document.getElementById('f-telefono');
+    var consent = document.getElementById('f-consent');
+    var consentRow = document.getElementById('consent-row');
+    var ok = true;
+    if (!nombre.value.trim()) { setInvalid(nombre, true); ok = false; } else { setInvalid(nombre, false); }
+    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
+    if (!emailOk) { setInvalid(email, true); ok = false; } else { setInvalid(email, false); }
+    var telOk = telefono.value.replace(/[^0-9]/g, '').length >= 9;
+    if (!telOk) { setInvalid(telefono, true); ok = false; } else { setInvalid(telefono, false); }
+    consentRow.classList.toggle('invalid', !consent.checked);
+    if (!consent.checked) ok = false;
+    if (!ok) return;
+    var endpoint = form.getAttribute('data-endpoint');
+    if (endpoint) { fetch(endpoint, { method: 'POST', body: new FormData(form) }).catch(function () {}); }
+    card.classList.add('sent');
+  });
+
+  // Reveal
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (prefersReduced || !('IntersectionObserver' in window)) {
+    els.forEach(function (el) { el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0.12 });
+    els.forEach(function (el) { io.observe(el); });
+  }
+})();
+</script>
+
+<!-- ============ Idioma ES / EN ============ -->
+<script>
+(function () {
+  var EN = {
+    "Inicio": "Home",
+    "El método": "The method",
+    "Pilar Garijo": "Pilar Garijo",
+    "Cursos": "Courses",
+    "Inscripción": "Enrolment",
+    "Área privada": "Private area",
+    "Academia": "Academy",
+    "Para profesionales": "For professionals",
+    "Formación para profesionales del masaje": "Training for massage professionals",
+    "El Método Garijo,": "The Garijo Method,",
+    "de profesional a profesional.": "from professional to professional.",
+    "Más de treinta años de terapia manual condensados en una formación pensada exclusivamente para masajistas y quiromasajistas en activo. Aprende el método directamente de su creadora.": "More than thirty years of manual therapy condensed into a training designed exclusively for practising masseurs and chiromassage therapists. Learn the method directly from its creator.",
+    "Quiero saber más": "I want to know more",
+    "Ver cursos": "See courses",
+    "Trabajando el método desde": "Working with the method since",
+    "Personas tratadas con éxito": "People successfully treated",
+    "Propio": "Our own",
+    "Un método único y probado": "A unique, proven method",
+    "Una academia solo para profesionales.": "An academy for professionals only.",
+    "Esta formación no es de iniciación. Está dirigida a masajistas y quiromasajistas que ya ejercen y quieren incorporar el Método Garijo a su consulta: protocolos reales, criterio clínico y técnica depurada durante más de tres décadas.": "This is not an introductory course. It is aimed at masseurs and chiromassage therapists who already practise and want to bring the Garijo Method into their work: real protocols, clinical judgement and technique refined over more than three decades.",
+    "El Método Garijo": "The Garijo Method",
+    "Un método propio, probado en más de 25.000 personas.": "Our own method, proven in more than 25,000 people.",
+    "Desde 1994, en los Centros de Quiromasaje Pilar Garijo ofrecemos soluciones de la mejor calidad basadas en terapias manuales, con un método propio de probado éxito.": "Since 1994, at the Pilar Garijo Chiromassage Centres we have offered the highest quality solutions based on manual therapies, with our own method of proven success.",
+    "Terapia manual pura": "Pure manual therapy",
+    "Sin aparatología ni atajos: manos, anatomía y criterio. El método trabaja la causa, no solo el síntoma, con técnicas refinadas consulta a consulta desde 1994.": "No machines, no shortcuts: hands, anatomy and judgement. The method works on the cause, not just the symptom, with techniques refined session after session since 1994.",
+    "Protocolos que funcionan": "Protocols that work",
+    "Cada técnica del método ha pasado por miles de camillas antes de llegar a la academia. Te llevas protocolos completos, listos para aplicar con tus propios clientes desde el primer día.": "Every technique in the method has been through thousands of treatment tables before reaching the academy. You take away complete protocols, ready to apply with your own clients from day one.",
+    "De su creadora, sin intermediarios": "From its creator, with no middlemen",
+    "El método lo enseña quien lo creó. Pilar transmite no solo la técnica, sino el ojo clínico y los matices que no caben en un manual.": "The method is taught by the person who created it. Pilar passes on not only the technique, but the clinical eye and the nuances that no manual can capture.",
+    "Quién enseña": "Who teaches",
+    "Fundadora de los Centros de Quiromasaje Pilar Garijo, Pilar lleva desde 1994 dedicada en exclusiva a la terapia manual. En estos años ha tratado con éxito a más de veinticinco mil personas y ha convertido su experiencia en un método propio.": "Founder of the Pilar Garijo Chiromassage Centres, Pilar has dedicated herself exclusively to manual therapy since 1994. Over these years she has successfully treated more than twenty-five thousand people and turned her experience into her own method.",
+    "Ahora, por primera vez, abre ese método a otros profesionales: la academia nace para que masajistas y quiromasajistas puedan formarse directamente con ella.": "Now, for the first time, she opens that method to other professionals: the academy is born so that masseurs and chiromassage therapists can train directly with her.",
+    "— Pilar Garijo": "— Pilar Garijo",
+    "La formación": "The training",
+    "Los cursos de la academia": "The academy courses",
+    "Inscripción abierta": "Enrolment open",
+    "Septiembre 2026": "September 2026",
+    "Curso de Masaje": "Massage Course",
+    "La formación completa en el masaje del método: la base sobre la que se construye todo el trabajo de los centros Pilar Garijo.": "The complete training in the method's massage: the foundation on which all the work of the Pilar Garijo centres is built.",
+    "Pago único": "One-time payment",
+    "Reservar mi plaza": "Reserve my place",
+    "Pronto disponible": "Coming soon",
+    "Noviembre 2026": "November 2026",
+    "Curso de Colocación y Manipulación": "Positioning & Manipulation Course",
+    "El segundo nivel del método, editado por fascículos para que avances bloque a bloque, a tu ritmo.": "The method's second level, released in instalments so you can progress block by block, at your own pace.",
+    "Bloque 1": "Block 1",
+    "Bloque 2": "Block 2",
+    "Bloque 3": "Block 3",
+    "Próximamente": "Coming soon",
+    "Avísame cuando salga": "Notify me when it launches",
+    "Regístrate para saber más": "Register to learn more",
+    "Sé el primero en enterarte.": "Be the first to know.",
+    "Déjanos tus datos y te avisaremos antes que a nadie de la apertura de inscripciones, las plazas y cada nuevo fascículo.": "Leave us your details and we'll let you know before anyone else about enrolment opening, places and every new instalment.",
+    "Aviso prioritario al abrir la inscripción de septiembre": "Priority notice when September enrolment opens",
+    "Lanzamiento de cada bloque del curso por fascículos": "Launch of each block of the instalment course",
+    "Contenido del método, solo para profesionales": "Method content, for professionals only",
+    "Nombre": "Name",
+    "Escribe tu nombre": "Enter your name",
+    "Email": "Email",
+    "Revisa el email": "Check the email",
+    "Teléfono": "Phone",
+    "Revisa el teléfono": "Check the phone number",
+    "Acepto recibir comunicaciones de la Academia Pilar Garijo y la": "I agree to receive communications from the Pilar Garijo Academy and the",
+    "política de privacidad": "privacy policy",
+    ". Podrás darte de baja en cualquier momento.": ". You can unsubscribe at any time.",
+    "Sin spam. Solo información de la academia.": "No spam. Only academy information.",
+    "Ya estás dentro.": "You're in.",
+    "Te avisaremos antes que a nadie cuando abramos la inscripción de septiembre.": "We'll let you know before anyone else when September enrolment opens.",
+    "Dudas frecuentes": "Common questions",
+    "Preguntas frecuentes": "Frequently asked questions",
+    "¿Puedo apuntarme si no soy profesional?": "Can I sign up if I'm not a professional?",
+    "No. La academia está pensada exclusivamente para masajistas y quiromasajistas en activo. Los contenidos dan por hecho que ya dominas la base de la profesión.": "No. The academy is intended exclusively for practising masseurs and chiromassage therapists. The content assumes you already master the basics of the profession.",
+    "¿Cuándo abre la inscripción del curso de masaje?": "When does enrolment for the massage course open?",
+    "En septiembre de 2026. Las plazas se anunciarán primero a las personas registradas en la lista — déjanos tus datos y te avisaremos antes que a nadie.": "In September 2026. Places will be announced first to those registered on the list — leave us your details and we'll let you know before anyone else.",
+    "¿Cómo funciona el curso por fascículos?": "How does the instalment course work?",
+    "El Curso de Colocación y Manipulación se publicará por bloques a partir de noviembre de 2026: Bloque 1, Bloque 2 y Bloque 3. Iremos anunciando el contenido y las fechas de cada uno.": "The Positioning & Manipulation Course will be published in blocks from November 2026: Block 1, Block 2 and Block 3. We'll announce the content and dates of each one.",
+    "¿Quién imparte la formación?": "Who teaches the training?",
+    "Pilar Garijo, creadora del método y fundadora de los Centros de Quiromasaje Pilar Garijo, en activo desde 1994.": "Pilar Garijo, creator of the method and founder of the Pilar Garijo Chiromassage Centres, working since 1994.",
+    "Formación profesional en el Método Garijo. Una academia solo para profesionales, desde 1994.": "Professional training in the Garijo Method. An academy for professionals only, since 1994.",
+    "Contacto": "Contact",
+    "Centros de Quiromasaje Pilar Garijo": "Pilar Garijo Chiromassage Centres"
+  };
+
+  var originals = new Map();
+  function cache(node) { if (!originals.has(node)) originals.set(node, node.nodeValue); }
+  function walk(apply) {
+    var tw = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+    var n;
+    while ((n = tw.nextNode())) {
+      var raw = n.nodeValue;
+      if (!raw || !raw.trim()) continue;
+      var key = raw.trim();
+      if (apply) { if (EN[key]) { cache(n); n.nodeValue = raw.replace(key, EN[key]); } }
+      else if (originals.has(n)) { n.nodeValue = originals.get(n); }
+    }
+  }
+  function setLang(lang) {
+    document.documentElement.setAttribute('lang', lang === 'en' ? 'en' : 'es');
+    walk(lang === 'en');
+    document.querySelectorAll('.ah-lang button').forEach(function (b) { b.classList.toggle('on', b.getAttribute('data-lang') === lang); });
+    try { localStorage.setItem('pg_lang', lang); } catch (e) {}
+  }
+  document.querySelectorAll('.ah-lang button').forEach(function (b) {
+    b.addEventListener('click', function () { setLang(b.getAttribute('data-lang')); });
+  });
+  var saved = 'es';
+  try { saved = localStorage.getItem('pg_lang') || 'es'; } catch (e) {}
+  if (saved === 'en') setLang('en');
+})();
+</script>
+
+</body>
+</html>

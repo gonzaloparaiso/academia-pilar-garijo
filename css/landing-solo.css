@@ -1,0 +1,92 @@
+/* ============================================================
+   Academia Pilar Garijo — landing única de inscripción
+   Todo visible en un viewport, sin scroll (en pantallas de escritorio
+   normales). Reutiliza variables/tipografía/componentes de academia.css
+   (.tag, .cta, .field, .lead-form) con un layout propio y compacto.
+   ============================================================ */
+
+html, body { height: 100%; }
+body.solo { margin: 0; min-height: 100dvh; display: flex; flex-direction: column; background: var(--ink); color: var(--cream); overflow-x: hidden; }
+
+.solo-header {
+  flex: none; display: flex; align-items: center; justify-content: space-between;
+  padding: clamp(14px, 2.2vw, 22px) var(--gutter);
+}
+.solo-header .ah-logo { display: inline-flex; align-items: baseline; gap: 12px; }
+.solo-header .ah-logo img { height: clamp(28px, 3vw, 36px); width: auto; }
+.solo-header .ah-logo .lbl { font-family: var(--font-label); font-size: 10px; font-weight: 600; letter-spacing: .34em; text-transform: uppercase; color: var(--cream-soft); }
+.solo-header .ah-lang { display: inline-flex; border: 1px solid var(--line-dark); border-radius: 999px; overflow: hidden; }
+.solo-header .ah-lang button { background: transparent; border: none; cursor: pointer; padding: 6px 11px; font-family: var(--font-body); font-size: 12px; font-weight: 600; letter-spacing: .04em; color: var(--cream); opacity: .7; }
+.solo-header .ah-lang button.on { background: var(--cream); color: var(--ink); opacity: 1; }
+
+.solo-main {
+  flex: 1 1 auto; display: flex; align-items: center; justify-content: center;
+  padding: clamp(6px, 1.4vw, 18px) var(--gutter);
+  min-height: 0;
+}
+.solo-shell {
+  width: 100%; max-width: 1080px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 4.5vw, 70px); align-items: center;
+}
+.solo-intro h1 { font-size: clamp(28px, 3.6vw, 46px); line-height: 1.03; letter-spacing: -.02em; margin: 16px 0 0; color: var(--cream); }
+.solo-intro h1 em { font-style: italic; font-weight: 400; color: color-mix(in oklab, var(--cream) 88%, var(--ink)); }
+.solo-intro p { font-size: clamp(14.5px, 1.15vw, 17px); max-width: 40ch; margin-top: 16px; color: var(--cream-soft); line-height: 1.55; }
+.solo-intro .tag { color: var(--cream-soft); }
+
+.solo-card {
+  background: var(--white); color: var(--ink);
+  border-radius: 18px; box-shadow: 0 30px 70px -30px rgba(0,0,0,.45);
+  padding: clamp(22px, 2.6vw, 34px) clamp(24px, 2.8vw, 36px);
+  display: flex; flex-direction: column; gap: clamp(14px, 1.7vw, 18px);
+  max-height: calc(100dvh - 110px);
+  overflow-y: auto;
+}
+.solo-card > form { display: flex; flex-direction: column; gap: clamp(14px, 1.7vw, 18px); }
+.solo-card h2 { font-size: clamp(19px, 1.7vw, 23px); margin: 0 0 2px; }
+.solo-card .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.solo-card .field { gap: 7px; }
+.solo-card .field label { font-family: var(--font-label); font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
+.solo-card .req { color: #b3352c; font-family: var(--font-body); }
+.solo-card .req-note { font-size: 11.5px; color: var(--ink-faint); margin: -8px 0 0; }
+.solo-card .field input {
+  font-family: var(--font-body); font-size: 15.5px; font-weight: 400; color: var(--ink);
+  background: var(--cream-bg); border: 1.5px solid var(--line); border-radius: 10px;
+  padding: 12px 14px; outline: none; transition: border-color .2s, background .2s; width: 100%; box-sizing: border-box;
+}
+.solo-card .field input::placeholder { color: color-mix(in oklab, var(--ink) 34%, var(--white)); }
+.solo-card .field input:hover { border-color: color-mix(in oklab, var(--ink) 35%, var(--white)); }
+.solo-card .field input:focus { border-color: var(--ink); background: var(--white); }
+.solo-card .field.invalid input { border-color: #b3352c; background: color-mix(in oklab, #b3352c 6%, var(--white)); }
+.solo-card .field .error { display: none; font-size: 12px; color: #b3352c; margin-top: 1px; }
+.solo-card .field.invalid .error { display: block; }
+.solo-card .consent { display: flex; align-items: flex-start; gap: 10px; font-size: 12.5px; line-height: 1.45; color: var(--ink-soft); cursor: pointer; padding-top: 2px; }
+.solo-card .consent input { margin-top: 3px; flex: none; width: 16px; height: 16px; accent-color: var(--ink); }
+.solo-card .consent a { text-decoration: underline; color: var(--ink); }
+.solo-card.invalid-consent .consent { color: #b3352c; }
+.solo-card .cta { justify-content: center; width: 100%; padding-top: 16px; padding-bottom: 16px; }
+.solo-card .form-note { font-size: 12px; color: var(--ink-faint); text-align: center; margin: 0; }
+.solo-card .form-success { display: none; flex-direction: column; align-items: center; text-align: center; gap: 10px; padding: 14px 0; }
+.solo-card .form-success .seal { width: 48px; height: 48px; border: 1px solid var(--ink); border-radius: 50%; display: grid; place-items: center; }
+.solo-card .form-success h2 { font-size: 20px; }
+.solo-card .form-success p { color: var(--ink-soft); font-size: 14px; max-width: 30ch; margin: 0; }
+.solo-card.sent form { display: none; }
+.solo-card.sent .form-success { display: flex; }
+
+@media (max-width: 480px) {
+  .solo-card .field-row { grid-template-columns: 1fr; }
+}
+
+.solo-footer {
+  flex: none; display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+  padding: clamp(10px, 1.4vw, 14px) var(--gutter); border-top: 1px solid var(--line-dark);
+  font-size: 12px; color: var(--cream-soft);
+}
+.solo-footer a { color: inherit; opacity: .85; }
+.solo-footer a:hover { opacity: 1; }
+
+@media (max-width: 860px) {
+  body.solo { min-height: auto; }
+  .solo-main { padding-top: 14px; padding-bottom: 14px; }
+  .solo-shell { grid-template-columns: 1fr; text-align: left; }
+  .solo-card { max-height: none; }
+}
